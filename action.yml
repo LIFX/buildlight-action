@@ -1,0 +1,20 @@
+---
+name: 'LIFX Build Light'
+description: 'Use your LIFX light to represent the state of your builds'
+author: 'LIFX Inc <support@lifx.com>'
+inputs:
+  lifx-token:
+    description: 'A token from your LIFX Cloud account'
+    required: true
+  selector:
+    description: 'The selector to choose which light, see: https://api.developer.lifx.com/docs/selectors'
+    required: true
+  status:
+    description: 'Either in_progress, success, failure or cancelled'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'
+branding:
+  icon: 'sun'
+  color: 'green'
